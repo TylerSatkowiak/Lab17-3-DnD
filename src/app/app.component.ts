@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Donut} from './interfaces/donut';
+import {Donut, DonutResponse} from './interfaces/donut';
+import {DonutServiceService} from './donutservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import {Donut} from './interfaces/donut';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Lab17DnD';
   
+  ngOnInit(){
+    
+  }
+
 }

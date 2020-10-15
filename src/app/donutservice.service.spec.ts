@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DonutserviceService } from './donutservice.service';
+import { DonutServiceService } from './donutservice.service';
 
 describe('DonutserviceService', () => {
-  let service: DonutserviceService;
+  let service: DonutServiceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DonutserviceService);
+    service = TestBed.inject(DonutServiceService);
   });
 
   it('should be created', () => {

@@ -7,6 +7,7 @@ import { DevsComponent } from './devs/devs.component';
 import { DonutViewComponent } from './donut-view/donut-view.component';
 import { DevViewComponent } from './dev-view/dev-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import {DonutServiceService} from './donutservice.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DonutServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
