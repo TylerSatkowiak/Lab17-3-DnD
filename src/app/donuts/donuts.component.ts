@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Donut, DonutResponse} from '../interfaces/donut';
+import { Donut} from '../interfaces/donut';
 import { DonutServiceService } from '../donutservice.service';
 
 @Component({
@@ -14,12 +14,9 @@ export class DonutsComponent implements OnInit {
    
   
   ngOnInit(){
-    debugger;
-    this.APIDonut.getDonut().subscribe(response => this.donuts = response.results
-    //this.APIDonut.getDonut().subscribe((data:Donut) =>{this.donut = data;}
-      
-    );
-      debugger;
+    this.APIDonut.getDonut().subscribe(response => this.donuts = response.results);
+    //this.APIDonut.getDonut().subscribe((data:Donut) =>{this.donuts = data;}
+    
   }
 
 }

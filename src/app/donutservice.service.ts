@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DonutServiceService {
-  apiUrl: 'https://grandcircusco.github.io/demo-apis/donuts.json';
+  apiUrl: string = 'https://grandcircusco.github.io/demo-apis/donuts.json';
 
   constructor(private http:HttpClient) { }
 
-  getDonut(): Observable<DonutResponse>{
+  getDonut(){
     return this.http.get<DonutResponse>(this.apiUrl);
   }
   
