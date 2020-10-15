@@ -11,7 +11,7 @@ export class DonutServiceService {
 
   constructor(private http:HttpClient) { }
 
-  getDonut() {
+  getDonut(): Observable<DonutResponse>{
     return this.http.get<DonutResponse>(this.apiUrl);
   }
   

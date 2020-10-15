@@ -1,20 +1,30 @@
 <p>donuts works!</p>
 <h2>(https://grandcircusco.github.io/demo-apis/donuts.json)</h2>
 
-<table>
+<div *ngFor="let d of donuts">
+    {{d}}
+    
+    {{d.id}}
+    {{d.name}}
+    {{d.ref}}
+    
+
+</div>
+    
+
+<!-- <table>
     <tr>
-        <th>Count:</th>
         <th>ID:</th>
         <th>ref:</th>
         <th>Name:</th>
     </tr>
-    <tr *ngFor="let d of response?.results">
+    <tr *ngFor="let d of donuts">
         <td>{{d.id}}</td>
         <td>{{d.ref}}</td>
         <td>{{d.name}}</td>
     </tr>
+</table> -->
 
-</table>
 
 <app-donut-view></app-donut-view>
 
