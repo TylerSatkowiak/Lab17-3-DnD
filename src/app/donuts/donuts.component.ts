@@ -19,6 +19,10 @@ export class DonutsComponent implements OnInit {
     
   }
 
+  getDonutInfo(d: number){
+    
+  }
+
 }
 
 /*

@@ -1,28 +1,18 @@
-<p>donuts works!</p>
+
 <!-- <h2>(https://grandcircusco.github.io/demo-apis/donuts.json)</h2> -->
+<h2>If learning about great scientific achievements doesn't interest you, here are some doughnuts to stare at.</h2>
 
-<div *ngFor="let d of donuts">
-    {{d.id}}
-    {{d.name}}
-    {{d.ref}}
-</div>
-    
-    
-
-<!-- <table>
+<table>
     <tr>
-        <th>ID:</th>
-        <th>ref:</th>
-        <th>Name:</th>
+        <th>API links:</th>
+        <th>More info:</th>
+        <th>button</th>
     </tr>
     <tr *ngFor="let d of donuts">
-        <td>{{d.id}}</td>
-        <td>{{d.ref}}</td>
-        <td>{{d.name}}</td>
+        <td><a href="{{d.ref}}">{{d.name}}</a></td>
+        <td><a href="https://grandcircusco.github.io/demo-apis/donuts/{{d.id}}.json">More</a></td>
+        <!-- <td><button (click)="getDonutInfo(d.id)">buttons</button></td> -->
     </tr>
-</table> -->
+</table>
 
-
-
-
-<!-- <button (click)="getDonut()">mmm donuts</button> -->
+ 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DevServiceService } from '../devservice.service';
+import {Dev, FamousDevs} from '../interfaces/dev';
 
 @Component({
   selector: 'app-devs',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./devs.component.css']
 })
 export class DevsComponent implements OnInit {
-
-  constructor() { }
+  devs: FamousDevs[];
+  constructor(private APIDev: DevServiceService) { }
 
   ngOnInit(): void {
+    this.APIDev.getDev().subscribe(response => this.devs = response.complete);
   }
 
+  
 }

@@ -1,2 +1,9 @@
-<p>devs works!</p>
+<h2>Welcome to the software programming Hall-of-Fame!</h2>
+<h4>These individuals will be remembered forever for their collective ingenuity and heroism.</h4>
 
+<div *ngFor="let f of devs">
+    Name: {{f.firstName}} {{f.lastName}} <br/>
+    Contribution: {{f.innovation}}  <br/>
+    Year: {{f.year}}<br/> <br/>
+
+</div>
