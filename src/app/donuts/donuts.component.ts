@@ -10,6 +10,8 @@ import { DonutServiceService } from '../donutservice.service';
 export class DonutsComponent implements OnInit {
   
   donuts: Donut[];
+  selected: number;
+
   constructor(private APIDonut: DonutServiceService){}
    
   
@@ -19,40 +21,8 @@ export class DonutsComponent implements OnInit {
     
   }
 
-  getDonutInfo(d: number){
-    
+  setSelected(i: number){
+    this.selected = i;
   }
 
 }
-
-/*
-  donut: Donut;
-  constructor(private route: DonutServiceService) { }
-*/
- 
-    /*
-    this.route.getPost().subscribe(
-      (data: Donut) =>{this.donut = data});
-      */
-/*
-
-import { Component, OnInit } from '@angular/core';
-import { DonutServiceService } from '../donutservice.service';
-import { Donut } from '../interfaces/donut';
-
- 
-@Component({
-  selector: 'app-donut-display',
-  templateUrl: './donut-display.component.html',
-  styleUrls: ['./donut-display.component.scss']
-})
-export class DonutDisplayComponent implements OnInit {
- 
-  public donuts: Donut[];
-  constructor(public donutService: DonutServiceService) { }
- 
-  ngOnInit(): void {
-    this.donutService.getDonut().subscribe(response => this.donuts = response.results);
-  }
-}
-*/

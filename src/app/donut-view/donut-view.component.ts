@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Donut } from '../interfaces/donut';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DonutServiceService } from '../donutservice.service';
+import { Donut, DonutDetail } from '../interfaces/donut';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-donut-view',
@@ -7,10 +11,13 @@ import { Donut } from '../interfaces/donut';
   styleUrls: ['./donut-view.component.css']
 })
 export class DonutViewComponent implements OnInit {
-  donut:Donut;
-  constructor() { }
+  thisDonut$:Observable<DonutDetail>;
+  constructor(private route: ActivatedRoute, private service: DonutServiceService) { }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.paramMap.get('id');
+    this.thisDonut$ = this.service.getDonutStuff(Number (id));
+
   }
 
 }

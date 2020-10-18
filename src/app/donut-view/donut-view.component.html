@@ -1,1 +1,14 @@
 <p>donut-view works!</p>
+<ng-container  *ngIf="thisDonut$ | async as thisDonut">
+    <div>
+        ID: {{thisDonut.id}}<br/>
+        {{thisDonut.ref}}<br/>
+        Name: {{thisDonut.name}}<br/>
+        Calories: {{thisDonut.calories}}<br/>
+        Extras: {{thisDonut.extras}}
+        <img src="{{thisDonut.photo}}">
+        {{thisDonut.photo_attribution}}
+    </div>
+</ng-container>
+
+<!-- <button [routerLink]="/donuts">buttons</button> -->
