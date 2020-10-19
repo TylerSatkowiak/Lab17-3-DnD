@@ -5,12 +5,12 @@
 <table>
     <tr>
         <th>API links:</th>
-        <th></th>
-        <th>More info:</th>
+        <th>More Info:</th>
+        
     </tr>
     <tr *ngFor="let d of donuts">
         <td><a href="{{d.ref}}">{{d.name}}</a></td>
-        <td><button [routerLink]="['/donut-view', d.id]">buttons</button></td>
+        <td><button [routerLink]="['/donut-view', d.id]">View</button></td>
         
     </tr>
 </table>

@@ -1,13 +1,15 @@
-<p>donut-view works!</p>
+<br/>
+<br/>
 <ng-container  *ngIf="thisDonut$ | async as thisDonut">
     <div>
-        ID: {{thisDonut.id}}<br/>
-        {{thisDonut.ref}}<br/>
+        <img src="{{thisDonut.photo}}" style="width:100px;height:75px;"><br/>
+        <a href="{{thisDonut.ref}}">API info</a><br/>
+        
         Name: {{thisDonut.name}}<br/>
         Calories: {{thisDonut.calories}}<br/>
-        Extras: {{thisDonut.extras}}
-        <img src="{{thisDonut.photo}}">
-        {{thisDonut.photo_attribution}}
+        Extras: {{thisDonut.extras}}<br/>
+        
+        Source: {{thisDonut.photo_attribution}}
     </div>
 </ng-container>
 
